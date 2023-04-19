@@ -1,11 +1,12 @@
-package pl.coderslab.finalproject;
+package pl.coderslab.finalproject.game;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import pl.coderslab.finalproject.ranking.RankingRepository;
+import pl.coderslab.finalproject.user.User;
 
 import javax.servlet.http.HttpSession;
-import java.util.List;
 
 @Controller
 @RequestMapping("/game")
@@ -21,6 +22,7 @@ public class GameController {
 
     @RequestMapping("/{id}")
     public String home(@PathVariable long id, Model model, HttpSession session) {
+        System.out.println(id);
         User user = (User) session.getAttribute("user");
         model.addAttribute("ranks", rankingRepository.findTop5ByGameIdOrderByPointsDesc(id));
         model.addAttribute("game",gameRepository.findById(id));

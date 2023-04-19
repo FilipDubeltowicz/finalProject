@@ -1,4 +1,4 @@
-package pl.coderslab.finalproject;
+package pl.coderslab.finalproject.config;
 
 import javax.servlet.*;
 import java.io.IOException;

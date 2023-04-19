@@ -1,4 +1,4 @@
-package pl.coderslab.finalproject;
+package pl.coderslab.finalproject.team;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -15,7 +15,5 @@ public class Team {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @ManyToOne(fetch = FetchType.LAZY)
-    private User user;
 }
 

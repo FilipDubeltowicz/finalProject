@@ -36,24 +36,12 @@
 
 <form action="/rank/add" method="post">
     <button class="button" type="submit">Save my score</button>
-    <input type="hidden" name="score" id="hidden-score" value="${score}">
+    <input type="hidden" name="score" id="hidden-score" value="">
     <input type="hidden" name="gameId" id="gameId" value="${game.id}">
     <input type="hidden" name="nickName" id="nickName" value="${user.nickName}">
 </form>
 <br>
-<table>
-    <h3>Top 5 scores:</h3>
-    <tr>
-        <th>Nick</th>
-        <th>Points</th>
-    </tr>
-    <tr>
-        <c:forEach items="${ranks}" var="rank">
-        <td>${rank.user.nickName}</td>
-        <td>${rank.points}</td>
-    </tr>
-    </c:forEach>
-</table>
+<%@ include file="top5scores.jsp" %>
 <%--<script src="${pageContext.request.contextPath}/js/2.js"></script>--%>
 
 <script>

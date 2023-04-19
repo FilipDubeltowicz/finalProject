@@ -1,4 +1,4 @@
-package pl.coderslab.finalproject;
+package pl.coderslab.finalproject.game;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

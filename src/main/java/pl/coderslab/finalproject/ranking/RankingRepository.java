@@ -1,4 +1,4 @@
-package pl.coderslab.finalproject;
+package pl.coderslab.finalproject.ranking;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

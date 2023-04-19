@@ -41,19 +41,8 @@
     <input type="hidden" name="nickName" id="nickName" value="${user.nickName}">
 </form>
 <br>
-<table>
-    <h3>Top 5 scores:</h3>
-    <tr>
-        <th>Nick</th>
-        <th>Points</th>
-    </tr>
-    <tr>
-        <c:forEach items="${ranks}" var="rank">
-        <td>${rank.user.nickName}</td>
-        <td>${rank.points}</td>
-    </tr>
-    </c:forEach>
-</table>
+<%@ include file="top5scores.jsp" %>
+
 <%--<script src="${pageContext.request.contextPath}/js/2.js"></script>--%>
 
 <script>

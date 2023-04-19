@@ -1,6 +1,7 @@
-package pl.coderslab.finalproject;
+package pl.coderslab.finalproject.user;
 
 import lombok.*;
+import pl.coderslab.finalproject.team.Team;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -24,5 +25,6 @@ public class User {
     private boolean isBlocked;
     @Column(columnDefinition = "boolean default false")
     private boolean isAdmin;
+    @ManyToOne
+    private Team team;
 }
-

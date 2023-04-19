@@ -1,9 +1,11 @@
-package pl.coderslab.finalproject;
+package pl.coderslab.finalproject.ranking;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import pl.coderslab.finalproject.game.GameRepository;
+import pl.coderslab.finalproject.user.UserRepository;
 
 import java.time.LocalDate;
 

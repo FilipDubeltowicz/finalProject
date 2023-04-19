@@ -1,10 +1,11 @@
-package pl.coderslab.finalproject;
+package pl.coderslab.finalproject.ranking;
 
 import lombok.*;
+import pl.coderslab.finalproject.game.Game;
+import pl.coderslab.finalproject.user.User;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity
 @Getter
