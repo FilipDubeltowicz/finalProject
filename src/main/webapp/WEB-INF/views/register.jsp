@@ -8,23 +8,47 @@
     <title>Title</title>
 </head>
 <style>
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    form label {
+        margin-right: 10px;
+    }
+
+    form input {
+        margin-bottom: 10px;
+    }
 </style>
 
 <body>
 <h1>Moja strona główna</h1>
-<form:form method="post" modelAttribute="user"><br>
-    FIRST NAME: <form:input path="firstName"/>
-    <form:errors path="firstName"/><br>
-    LAST NAME: <form:input path="lastName"/>
-    <form:errors path="lastName"/><br>
-    NICK NAME: <form:input path="nickName"/>
-    <form:errors path="nickName"/><br>
-    PASSWORD: <form:input path="password"/>
-    <form:errors path="password"/><br>
-    E-MAIL: <form:input path="email"/>
-    <form:errors path="email"/><br>
 
-    <input type="submit" value="REGISTER"><br>
+<form:form method="post" modelAttribute="user">
+    <label for="firstName">FIRST NAME:</label>
+    <form:input path="firstName"/>
+    <form:errors path="firstName"/>
+
+    <label for="lastName">LAST NAME:</label>
+    <form:input path="lastName"/>
+    <form:errors path="lastName"/>
+
+    <label for="nickName">NICK NAME:</label>
+    <form:input path="nickName"/>
+    <form:errors path="nickName"/>
+
+    <label for="password">PASSWORD:</label>
+    <form:input path="password"/>
+    <form:errors path="password"/>
+
+    <label for="email">E-MAIL:</label>
+    <form:input path="email"/>
+    <form:errors path="email"/>
+
+    <input type="submit" value="REGISTER">
 </form:form>
+
 </body>
 </html>

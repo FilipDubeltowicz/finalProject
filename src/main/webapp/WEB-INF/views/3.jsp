@@ -16,6 +16,12 @@
             position: absolute;
             top: 205px;
             left: 150px;
+            width: 150px;
+            height: 150px;
+        }
+        #click-me img {
+            width: 100%;
+            height: 100%;
         }
         .button {
             padding: 10px;

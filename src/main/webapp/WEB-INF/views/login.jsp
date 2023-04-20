@@ -8,6 +8,19 @@
     <title>Title</title>
 </head>
 <style>
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    form label {
+        margin-right: 10px;
+    }
+
+    form input {
+        margin-bottom: 10px;
+    }
 </style>
 
 <body>
