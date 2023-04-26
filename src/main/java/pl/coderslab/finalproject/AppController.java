@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
-@RequestMapping("")
+@RequestMapping("/app")
 public class AppController {
     private final GameRepository gameRepository;
     private final RankingRepository rankingRepository;
@@ -22,12 +22,14 @@ public class AppController {
         this.rankingRepository = rankingRepository;
     }
 
-    @RequestMapping("/app")
-    public String home(Model model, HttpSession session) {
+    @RequestMapping("")
+    public String dashboard(Model model, HttpSession session) {
         User user = (User) session.getAttribute("user");
         List<Game> games = gameRepository.findAll();
         model.addAttribute("user", user);
         model.addAttribute("games", games);
-        return "app";
+        List<Object[]> rankingResults = rankingRepository.generalRanking();
+        model.addAttribute("rankingResults", rankingResults);
+        return "dashboard";
     }
 }
