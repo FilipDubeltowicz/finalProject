@@ -6,8 +6,11 @@ import java.util.List;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     User getUserByNickName(String nickName);
+
     User getUserByEmail(String email);
+
     User getUserById(Long id);
+
     List<User> findAll();
 
     default boolean isValid(String email, String password) {

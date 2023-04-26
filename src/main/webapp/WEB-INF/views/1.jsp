@@ -14,7 +14,7 @@
 
             <form action="/rank/add" method="post">
                 <button class="button" type="submit">Save my score</button>
-                <input type="hidden" name="score" id="hidden-score" value="${score}">
+                <input type="hidden" name="score" id="hidden-score" value="0">
                 <input type="hidden" name="gameId" id="gameId" value="${game.id}">
                 <input type="hidden" name="nickName" id="nickName" value="${user.nickName}">
             </form>

@@ -7,6 +7,7 @@
         font-size: 20px;
         text-align: center;
     }
+
     button {
         font-size: 20px;
         margin-left: 10px;
@@ -23,11 +24,13 @@
             <p>${game.description}</p>
             <p>Score: <span id="score">100</span></p>
             <p>Time Remaining: <span id="timer">999</span> seconds</p>
-            <p>Your Guess: <input type="text" id="guess" maxlength="4" autocomplete="off"> <button onclick="guess()">Guess</button></p>
+            <p>Your Guess: <input type="text" id="guess" maxlength="4" autocomplete="off">
+                <button onclick="guess()">Guess</button>
+            </p>
             <p id="feedback"></p>
             <form action="/rank/add" method="post">
                 <button class="button" type="submit">Save my score</button>
-                <input type="hidden" name="score" id="hidden-score" value="">
+                <input type="hidden" name="score" id="hidden-score" value="100">
                 <input type="hidden" name="gameId" id="gameId" value="${game.id}">
                 <input type="hidden" name="nickName" id="nickName" value="${user.nickName}">
             </form>
@@ -45,7 +48,7 @@
                 let guessEl = document.getElementById("guess");
                 let hiddenScoreInput = document.getElementById("hidden-score");
 
-                guessEl.addEventListener("keydown", function(event) {
+                guessEl.addEventListener("keydown", function (event) {
                     if (event.keyCode === 13) {
                         event.preventDefault();
                         guess();
@@ -86,7 +89,7 @@
                     }
                 }
 
-                let countdown = setInterval(function() {
+                let countdown = setInterval(function () {
                     timer--;
                     timerEl.innerHTML = timer;
                     if (timer <= 0) {

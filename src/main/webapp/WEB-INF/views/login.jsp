@@ -12,7 +12,6 @@
                     <form:errors path="email"/><br>
                     PASSWORD: <form:input path="password" type="password"/>
                     <form:errors path="password"/><br>
-
                     <input type="submit" value="LOGIN"><br>
                 </form:form>
             </div>

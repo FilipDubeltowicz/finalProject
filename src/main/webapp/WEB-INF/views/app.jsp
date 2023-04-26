@@ -16,5 +16,5 @@
         </li>
     </c:forEach>
 </ul>
-    </body>
-    </html>
+</body>
+</html>
