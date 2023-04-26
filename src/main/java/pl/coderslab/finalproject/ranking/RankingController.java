@@ -26,14 +26,11 @@ public class RankingController {
     public String addRank(@RequestParam("score") int score,
                           @RequestParam("nickName") String nickName,
                           @RequestParam("gameId") long gameId) {
-
         Ranking ranking = new Ranking();
-
         ranking.setPoints(score);
         ranking.setUser(userRepository.getUserByNickName(nickName));
         ranking.setGame(gameRepository.getReferenceById(gameId));
         ranking.setDate(LocalDate.now());
-
         rankingRepository.save(ranking);
 
         return "redirect:/app";

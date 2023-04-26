@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 
@@ -12,7 +12,7 @@
 <ul>
     <c:forEach items="${games}" var="game">
         <li>
-            <a href="/game/${game.id}">${game.name}</a>
+            <a href="/app/game/${game.id}">${game.name}</a>
         </li>
     </c:forEach>
 </ul>
